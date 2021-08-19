@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'oddam_w_dobre_rece',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,11 @@ WSGI_APPLICATION = 'Oddam_w_rece.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'HOST': '127.0.0.1',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'charity_donation',
+        'USER': 'postgres',
+        'PASSWORD': 'coderslab',
     }
 }
 
